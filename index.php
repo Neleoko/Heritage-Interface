@@ -3,7 +3,7 @@ include 'Comparable.php';
 include 'Isport.php';
 include 'sport.php';
 include 'SportRelais.php';
-include 'SportBallons.php';
+include 'SportBallon.php';
 include 'Club.php';
 
 // Init les clubs
@@ -37,3 +37,21 @@ $club[3]->AjouterSport($sport3);
 $club[3]->AjouterSport($sportBallon3);
 $club[3]->AjouterSport($sportBallon4);
 $club[3]->AjouterSport($sportRelais2);
+ ?>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+echo "Liste des clubs" </br>
+<a href="?id=1">1 - Dijon 63</a> </br>
+<a href="?id=2">2 - PSG 67</a> </br>
+<a href="?id=3">3 - Nantes 65</a> </br>
+
+<body>
+</html>
+
+<?php
+if $_GET== 1 {
+    echo
+}
