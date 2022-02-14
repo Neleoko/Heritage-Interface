@@ -37,38 +37,17 @@ $club[3]->AjouterSport($sport3);
 $club[3]->AjouterSport($sportBallon3);
 $club[3]->AjouterSport($sportBallon4);
 $club[3]->AjouterSport($sportRelais2);
- ?>
 
-    <!DOCTYPE html>
-    <html>
-    <body>
+var_dump($_GET);
 
-    <a href="/?id=1">1- Dijon 63</a> <br>
-    <a href="/?id=2">2- PSG 67</a> <br>
-    <a href="/?id=3">3- Nantes 65</a> <br> <br> <br>
 
-    </body>
-    </html>
-
-<?php
-if ($_get['valeur']=1) {
-    $club[1] -> getIdClub();
-    $club[1] -> getLesSports();
-    $club[1] -> getNbPoints();
-    $club[1] -> getNomClub();
-
+foreach ($club as $keyClub => $valueClub){
+    echo '<a href="index.php?id='.$valueClub->getIdClub().'">' . $valueClub->getNomClub().'</a> <br>';
 }
-if ($_get['valeur']=2) {
-    $club[2] -> getIdClub();
-    $club[2] -> getLesSports();
-    $club[2] -> getNbPoints();
-    $club[2] -> getNomClub();
-
+if ($_GET["id"]){
+    echo "<br>Club" . $club[$_GET["id"]]->getNomClub()."<br>";
+    foreach ($club[$_GET["id"]]->getLesSports() as $keySport => $valueSport){
+        echo $valueSport->getNomSport()."<br>";
 }
-if ($_get['valeur']=2) {
-    $club[3] -> getIdClub();
-    $club[3] -> getLesSports();
-    $club[3] -> getNbPoints();
-    $club[3] -> getNomClub();
 
 }
