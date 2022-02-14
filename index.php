@@ -39,19 +39,36 @@ $club[3]->AjouterSport($sportBallon4);
 $club[3]->AjouterSport($sportRelais2);
  ?>
 
-<!DOCTYPE html>
-<html>
-<body>
+    <!DOCTYPE html>
+    <html>
+    <body>
 
-echo "Liste des clubs" </br>
-<a href="?id=1">1 - Dijon 63</a> </br>
-<a href="?id=2">2 - PSG 67</a> </br>
-<a href="?id=3">3 - Nantes 65</a> </br>
+    <a href="/?id=1">1- Dijon 63</a> <br>
+    <a href="/?id=2">2- PSG 67</a> <br>
+    <a href="/?id=3">3- Nantes 65</a> <br> <br> <br>
 
-<body>
-</html>
+    </body>
+    </html>
 
 <?php
-if $_GET== 1 {
-    echo
+if ($_get['valeur']=1) {
+    $club[1] -> getIdClub();
+    $club[1] -> getLesSports();
+    $club[1] -> getNbPoints();
+    $club[1] -> getNomClub();
+
+}
+if ($_get['valeur']=2) {
+    $club[2] -> getIdClub();
+    $club[2] -> getLesSports();
+    $club[2] -> getNbPoints();
+    $club[2] -> getNomClub();
+
+}
+if ($_get['valeur']=2) {
+    $club[3] -> getIdClub();
+    $club[3] -> getLesSports();
+    $club[3] -> getNbPoints();
+    $club[3] -> getNomClub();
+
 }
